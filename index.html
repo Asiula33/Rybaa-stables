@@ -202,7 +202,6 @@
  </head>
 <body>
 
-<div id="strona1">
 <header>Rybaa Stable</header> 
 <div class="grid">
     <div class="horse-card">
@@ -296,13 +295,7 @@
   <span class="lightbox-arrow right" onclick="changeImage(1)">&#10095;</span>
   <img id="lightbox-img" src="" alt="">
 </div>
-</div>
-  
-<div id="strona2" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #d0ebff; color: white; padding: 50px; overflow: auto;">
-  <header>Description "Royal"</header>
-  <span onclick="wrocDoStrony()" style="position: absolute; top: 20px; right: 30px; font-size: 40px; cursor: pointer; color: #000 ;">X</span>
-  <p>super konis</p>
-</div>
+
   
 <script>
 let currentIndex = 0;
@@ -355,24 +348,11 @@ document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeLightbox();
   }
 });
-  
-    
-    function pokazStrona2() {
-      document.getElementById('strona1').style.display = 'none';
-      document.getElementById('strona2').style.display = 'block';
-    }
-    function wrocDoStrony() {
-      document.getElementById('strona2').style.display = 'none';
-      document.getElementById('strona1').style.display = 'block';
-    }
-    function pokazStrona1() {
-      document.getElementById('strona2').style.display = 'none';
-      document.getElementById('strona1').style.display = 'block';
-    }
   </script>
 
 </body>
 </html>
+
 
 
 
