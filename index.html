@@ -206,7 +206,7 @@
 <div class="grid">
     <div class="horse-card">
         <img src="kon2.png">
-        <h3>Royal</h3>
+        <h3><span onclick="pokazStrona2()" style="cursor: pointer; color: blue; text-decoration: underline;">Royal</span></h3>
         <p>Age: 12yo</p>
         <p>Breed: Zangershide</p>
         <p>Coat: Buckskin</p>
@@ -295,6 +295,14 @@
   <span class="lightbox-arrow right" onclick="changeImage(1)">&#10095;</span>
   <img id="lightbox-img" src="" alt="">
 </div>
+
+  
+<div id="strona2" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #2c3e50; color: white; padding: 50px; overflow: auto;">
+  <h1>Description "Shell"</h1>
+  <p> super konis </p>
+  <button onclick="wrocDoStrony()" style="padding: 10px 20px; cursor: pointer;">Back</button>
+</div>
+  
 <script>
 let currentIndex = 0;
 const images = document.querySelectorAll('.masonry-item img');
@@ -347,9 +355,16 @@ document.addEventListener('keydown', function(e) {
   }
 });
  </script>
-    
+
+ <script>
+function pokazStrona2() {
+  document.body.innerHTML = document.getElementById('strona2').innerHTML;
+}
+ </script>
+  
 </body>
 </html>
+
 
 
 
