@@ -65,12 +65,44 @@
     .horse-card p {
         margin: 5px 0;
     }
-</style>
-</head>
+
+    .gallery-btn {
+  font-family: 'Alex Brush', cursive;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #82c8ff;
+  color: black;
+  margin-bottom: 20px;
+   }
+
+   .gallery {
+  display: none;
+  margin-top: 20px;
+   }
+
+   .gallery img {
+  width: 200px;
+  height: auto;
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px solid #000;
+   }
+    
+  </style>
+ </head>
 <body>
 
 <header>Rybaa Stable</header>
-
+    
+ <button class="gallery=btn" onclick="toggleGallery()">Gallery</button>
+    <div id="gallery" class="gallery">
+        <img src=" -- ">
+        <img src=" -- ">
+        <img src=" -- ">
+        
 <div class="grid">
     <div class="horse-card">
         <img src="kon2.png">
@@ -137,6 +169,7 @@
 
 </body>
 </html>
+
 
 
 
