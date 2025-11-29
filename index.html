@@ -8,6 +8,43 @@
 <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 <style>
+
+    .masonry-gallery {
+  column-count: 3;
+  column-gap: 15px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.masonry-item:hover {
+  transform: scale(1.02);
+}
+
+.masonry-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .masonry-gallery { column-count: 2; }
+}
+
+@media (max-width: 480px) {
+  .masonry-gallery { column-count: 1; }
+}
+    
     body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -179,11 +216,22 @@
         <p>Age: -- • Breed: --</p>
     </div>
      </div class="grid">
+
+<p><header>Gellery</header></p>
     
+    <div class="masonry-gallery">
+  <div class="masonry-item">
+    <img src="kon4.png" alt="Opis">
+  </div>
+  <div class="masonry-item">
+    <img src="twoje-zdjecie-2.jpg" alt="Opis">
+  </div>
+</div>
 
      
 </body>
 </html>
+
 
 
 
