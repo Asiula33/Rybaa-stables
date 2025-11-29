@@ -4,6 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rybaa Stable</title>
+<div class="horse-card">
+  <h3 onclick="toggleDescription(this)">Shell</h3>
+  <p class="description" style="display:none;">
+    superowy konik kiedys zmienie ten opis to tylko test narazie
+  </p>
+</div>
+
+<script>
+function toggleDescription(el) {
+  const desc = el.nextElementSibling; // szuka <p> zaraz po <h3>
+  if(desc.style.display === "none") {
+    desc.style.display = "block";  // pokaż opis
+  } else {
+    desc.style.display = "none";   // ukryj opis
+  }
+}
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
 <style>
@@ -123,6 +140,7 @@
 
 </body>
 </html>
+
 
 
 
