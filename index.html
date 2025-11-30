@@ -197,7 +197,16 @@
   border-radius: 10px;
   border: 2px solid #000;
    }
-    
+
+  .description-content {
+    display: none;
+}
+
+.description-content.active {
+    display: block;
+}
+
+  
   </style>
  </head>
 <body>
@@ -257,9 +266,18 @@
 <div class="grid">
     
     <div class="horse-card">
-        <img src="https://via.placeholder.com/300x150?text=Horse+7" alt="Horse 7">
-        <h3>Horse 7</h3>
-        <p>Age: -- • Breed: --</p>
+        <img src="kon5.png">
+        <h3>Nala</h3>
+        <p>Age: 4yo</p>
+        <p>Breed: Zangershide</p>
+        <p>Coat: Perlino (colored)</p>
+        <p>Gender: Mare</p>
+        <p><b>Full Name: Nal'a</b></p>
+        <p><b>For Sale/Lease: Lease</b></p>
+        <div onclick="toggleDescription()"><h3>Description</h3></div>
+        <div class="description-content" id="descContent">
+        Tutaj se jest opis blblblblblblbl
+       </div>
     </div>
     <div class="horse-card">
         <img src="https://via.placeholder.com/300x150?text=Horse+8" alt="Horse 8">
@@ -348,10 +366,16 @@ document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeLightbox();
   }
 });
+
+  function toggleDescription() {
+    const content = document.getElementById('descContent');
+    content.classList.toggle('active');
+}
   </script>
 
 </body>
 </html>
+
 
 
 
