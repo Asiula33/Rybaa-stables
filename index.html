@@ -100,7 +100,31 @@
 @media (max-width: 480px) {
   .masonry-gallery { column-count: 1; }
 }
-    
+   
+.horse-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+    align-items: start;
+}
+
+.horse-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.horse-description {
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .horse-grid {
+        grid-template-columns: 1fr;
+    }
+}
     body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -168,7 +192,7 @@
         margin: 10px 0 5px 0;
         text-shadow: 0px 2px 3px rgba(0,0,0,0.6);
     }
-
+  
     .horse-card p {
         margin: 5px 0;
     }
@@ -300,21 +324,43 @@ She's still inexperienced in contact with people, so she needs someone patient w
      </div class="grid">
   
 <p><header>My Breeding Horses</header></p>
-<div class="grid">
-    <div class="horse-card">
-        <img src="10.png" alt="Horse 10">
-        <h3>Horse 10</h3
-    </div>
-  <div class="horse-card">
-        <img src="11.png" alt="Horse 11">
-        <h3>Horse 11</h3>
-    </div>
-  <div class="horse-card">
-        <img src="12.png" alt="Horse 12">
-        <h3>Horse 12</h3>
-    </div>
- </div class="grid">
   
+ <div class="horse-grid">
+         <div>
+        <img src="10.png" alt="Zdjęcie konia" class="horse-image">
+         </div>
+         <div class="horse-description">
+        <h3>Imię konia</h3>
+        <p>Tutaj wklej opis konia...</p>
+        </div>
+ </div>
+ <div class="horse-grid">
+         <div>
+        <img src="11.png" alt="Zdjęcie konia" class="horse-image">
+         </div>
+         <div class="horse-description">
+        <h3>Imię konia</h3>
+        <p>Tutaj wklej opis konia...</p>
+        </div>
+ </div>
+
+  
+  <p><header>Gallery</header></p>
+    
+    <div class="masonry-gallery">
+    <div class="masonry-item">
+    <img src="galeria1.jpg" alt="Opis">
+  </div>
+    <div class="masonry-item">
+    <img src="galeria2.png" alt="Opis">
+  </div>
+    <div class="masonry-item">
+    <img src="galeria3.png" alt="Opis">
+  </div>
+    <div class="masonry-item">
+    <img src="galeria4.png" alt="Opis">
+  </div>
+</div>
 
     <div class="lightbox" id="lightbox">
   <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
@@ -384,6 +430,7 @@ document.addEventListener('keydown', function(e) {
 
 </body>
 </html>
+
 
 
 
